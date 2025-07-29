@@ -120,7 +120,6 @@ body {
 .contenedor-contenido {
     display: flex;
     flex-direction: column;
-    max-width: 960px;
     width: 100%;
 }
 
