@@ -89,25 +89,6 @@ body {
   transition: 0.4s;
 }
 
-.enlace-navegacion-activo {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #0d141c;
-  text-decoration: none;
-  transition: all 0.2s;
-  background-color: #e7edf4;
-  border-radius: 7%;
-}
-
-.enlace-navegacion-activo:hover {
-  color: #ffffff;
-  background-color: #5e130a;
-  border-radius: 6px;
-  transition: 0.4s;
-}
-
 .contenido-principal {
   display: flex;
   justify-content: center;
@@ -136,7 +117,7 @@ body {
 .perfil-foto {
   width: 128px;
   height: 128px;
-  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYvouXVqpEMwGkbOJymU7F28nXGXZMTvjt-c6duKVxRl3ZA8uv9QXiLOAJh54mMzgDuIIZ039HfFnuQjr89XCAVk8vikVu46-0uj_rHjuASv-sgUm_mmSBLhBEj1aTOjtZcpt_iVMvkdfHzjhZp6a2oYUEniNJkEI5ZHJ97y1z-vfiCu2dJAaTBzLL7M_W4BHXR4qqE_9IDPZ2gSGlKBtSe0zllNqBvS__vodAnNsK3J3T9tyhVCUah_ILojFBL7WW-q1RbH237lA');
+  background-image: url('dx.png');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -244,7 +225,7 @@ body {
 .experiencia-logo {
   width: 70px;
   height: 70px;
-  background-image: url('https://via.placeholder.com/70');
+  background-image: url('');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -370,8 +351,7 @@ body {
     max-height: 35px;
   }
 
-  .enlace-navegacion,
-  .enlace-navegacion-activo {
+  .enlace-navegacion {
     font-size: 12px;
     padding: 6px 12px;
   }
