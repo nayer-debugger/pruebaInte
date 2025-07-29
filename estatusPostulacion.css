@@ -102,14 +102,12 @@ body {
     color: #ffffff;
     background-color: #5e130a;
     border-radius: 6px;
-    transition: 0.1s;
 } 
 
 .enlace-navegacion:hover {
     color: #ffffff;
     background-color: #5e130a;
     border-radius: 6px;
-    transition: 0.1s;
 }
 
 .contenido-principal {
