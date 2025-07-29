@@ -64,18 +64,6 @@ body {
     gap: 20px;
 }
 
-.derecha-encabezado .imagen-perfil {
-    display: flex;
-    align-items: center;
-}
-
-.derecha-encabezado .imagen-perfil-img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 .enlace-navegacion {
     display: inline-block;
     padding: 8px 16px;
