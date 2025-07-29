@@ -343,3 +343,102 @@ body {
     height: 40px;
   }
 }
+
+@media (max-width: 360px) {
+  .encabezado {
+    padding: 8px 2%;
+    gap: 8px;
+  }
+
+  .logo-titulo-imagen {
+    max-width: 120px;
+    max-height: 35px;
+  }
+
+  .derecha-encabezado {
+    gap: 8px;
+  }
+
+  .enlaces-navegacion {
+    gap: 8px;
+  }
+
+  .enlace-navegacion {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .derecha-encabezado .imagen-perfil-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contenido-principal {
+    padding: 10px 2%;
+  }
+
+  .perfil-contenedor {
+    padding: 12px;
+  }
+
+  .perfil-foto {
+    width: 60px;
+    height: 60px;
+  }
+
+  .perfil-nombre {
+    font-size: 18px;
+  }
+
+  .perfil-titulo,
+  .perfil-ubicacion {
+    font-size: 12px;
+  }
+
+  .boton-editar {
+    width: 100%;
+    max-width: 280px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .seccion-titulo {
+    font-size: 18px;
+    padding: 16px 12px 8px;
+  }
+
+  .seccion-texto {
+    font-size: 12px;
+    padding: 4px 12px 8px;
+  }
+
+  .habilidades-contenedor {
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .habilidad {
+    font-size: 11px;
+    padding: 0 10px;
+    height: 28px;
+  }
+
+  .experiencia-item {
+    gap: 12px;
+    padding: 8px 12px;
+  }
+
+  .experiencia-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .experiencia-titulo {
+    font-size: 14px;
+  }
+
+  .experiencia-ubicacion,
+  .experiencia-periodo {
+    font-size: 12px;
+  }
+}

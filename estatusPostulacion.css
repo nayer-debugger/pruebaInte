@@ -214,7 +214,6 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Media Queries para Responsividad */
 @media (max-width: 768px) {
     .encabezado {
         flex-direction: column;
