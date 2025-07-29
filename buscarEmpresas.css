@@ -8,7 +8,7 @@ body {
     color: #0d141c;
 }
 
-.raiz-diseno {
+.contenedor-principal {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -16,7 +16,7 @@ body {
     position: relative;
 }
 
-.contenedor-diseno {
+.contenedor-layout {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -106,11 +106,17 @@ body {
 }
 
 .contenido-principal {
+    display: flex;
     flex: 1;
+    justify-content: center;
+    padding: 20px 5%;
+}
+
+.contenedor-contenido {
     display: flex;
     flex-direction: column;
-    padding: 20px 5%;
-    justify-content: center;
+    max-width: 960px;
+    width: 100%;
 }
 
 .seccion-busqueda {
@@ -293,7 +299,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 460px) {
     .encabezado {
         padding: 8px 3%;
     }
@@ -336,15 +342,45 @@ body {
     }
 }
 
-@media (max-width: 468px) {
-    .info-empresa {
-        text-align: center;
-        width: 100%;
+@media (max-width: 360px) {
+    .logo img {
+        max-width: 120px;
+        max-height: 35px;
+    }
+
+    .enlaces-navegacion {
+        gap: 3px;
+    }
+
+    .enlace-navegacion,
+    .enlace-navegacion-activo {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .contenido-principal {
+        padding: 8px 3%;
+    }
+
+    .titulo-seccion {
+        font-size: 16px;
+        padding: 10px 6px 6px;
+    }
+
+    .item-empresa {
+        min-height: 48px;
+    }
+
+    .logo-empresa {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nombre-empresa {
+        font-size: 12px;
     }
 
     .categoria-empresa {
-        text-align: center;
-        -webkit-line-clamp: 3;
-        font-size: 14px;
+        font-size: 10px;
     }
 }
