@@ -89,6 +89,25 @@ body {
   transition: 0.4s;
 }
 
+.enlace-navegacion-activo {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0d141c;
+  text-decoration: none;
+  transition: all 0.2s;
+  background-color: #e7edf4;
+  border-radius: 7%;
+}
+
+.enlace-navegacion-activo:hover {
+  color: #ffffff;
+  background-color: #5e130a;
+  border-radius: 6px;
+  transition: 0.4s;
+}
+
 .contenido-principal {
   display: flex;
   justify-content: center;
@@ -117,7 +136,7 @@ body {
 .perfil-foto {
   width: 128px;
   height: 128px;
-  background-image: url('dx.png');
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYvouXVqpEMwGkbOJymU7F28nXGXZMTvjt-c6duKVxRl3ZA8uv9QXiLOAJh54mMzgDuIIZ039HfFnuQjr89XCAVk8vikVu46-0uj_rHjuASv-sgUm_mmSBLhBEj1aTOjtZcpt_iVMvkdfHzjhZp6a2oYUEniNJkEI5ZHJ97y1z-vfiCu2dJAaTBzLL7M_W4BHXR4qqE_9IDPZ2gSGlKBtSe0zllNqBvS__vodAnNsK3J3T9tyhVCUah_ILojFBL7WW-q1RbH237lA');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -342,5 +361,68 @@ body {
   .experiencia-logo {
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-titulo-imagen {
+    max-width: 120px;
+    max-height: 35px;
+  }
+
+  .enlace-navegacion,
+  .enlace-navegacion-activo {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .perfil-foto {
+    width: 60px;
+    height: 60px;
+  }
+
+  .perfil-nombre {
+    font-size: 18px;
+  }
+
+  .perfil-titulo,
+  .perfil-ubicacion {
+    font-size: 12px;
+  }
+
+  .boton-editar {
+    font-size: 11px;
+    height: 36px;
+    max-width: 250px;
+  }
+
+  .seccion-titulo {
+    font-size: 18px;
+    padding: 16px 12px 8px;
+  }
+
+  .seccion-texto {
+    font-size: 12px;
+    padding: 4px 12px 8px;
+  }
+
+  .habilidad {
+    font-size: 11px;
+    padding: 0 10px;
+    height: 28px;
+  }
+
+  .experiencia-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .experiencia-titulo {
+    font-size: 14px;
+  }
+
+  .experiencia-ubicacion,
+  .experiencia-periodo {
+    font-size: 12px;
   }
 }
