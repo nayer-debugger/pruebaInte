@@ -1,96 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap">
-  <link rel="stylesheet" href="perfilEstudiante.css">
-  <title>Perfil de Estudiante</title>
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Estudiante</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="perfilEstudiante.css">
 </head>
 <body>
-  <div class="contenedor-principal">
-    <div class="contenedor-layout">
-      <header class="encabezado">
-        <div class="izquierda-encabezado">
-          <div class="logo">
-            <img src="Logo.png" alt="Logo ConnectHub" class="logo-titulo-imagen" width="220" height="60">
-          </div>
+    <div class="contenedor-principal">
+        <div class="contenedor-layout">
+            <header class="encabezado">
+                <div class="izquierda-encabezado">
+                    <div class="logo">
+                        <img src="Logo.png" alt="TalentPool Logo" width="220" height="60">
+                    </div>
+                </div>
+                <div class="derecha-encabezado">
+                    <div class="enlaces-navegacion">
+                        <a href="principalEstudiante.html" class="enlace-navegacion">Inicio</a>
+                        <a href="buscarEmpresas.html" class="enlace-navegacion">Empresas</a>
+                        <a href="estatusPostulacion.html" class="enlace-navegacion">Postulaciones</a>
+                        <a href="perfilEstudiante.html" class="enlace-navegacion-activo">Perfil</a>
+                    </div>
+                    <div class="imagen-perfil">
+                        <a href="perfilEstudiante.html">
+                            <img src="dx.png" alt="Imagen Perfil" class="imagen-perfil-img" width="30" height="30">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="contenido-principal">
+                <div class="contenido-contenedor">
+                    <div class="perfil-contenedor">
+                        <div class="perfil-info">
+                            <div class="perfil-foto"></div>
+                            <div class="perfil-detalles">
+                                <p class="perfil-nombre">Nayer M</p><br>
+                                <p class="perfil-titulo">Gerente Senior de Producto en Innovate Solutions</p>
+                                <p class="perfil-ubicacion">Ubicada en el Área de la Bahía de San Francisco</p>
+                            </div>
+                            <a href="actualizarPerfilEstudiante.php" target="_blank">
+                                <button class="boton-editar">Editar Perfil</button>
+                            </a>
+                            <hr class="divisor-perfil">
+                        </div>
+                    </div>
+                    <h2 class="seccion-titulo">Acerca de</h2>
+                    <p class="seccion-texto">
+                        Trabajador de Ciberseguridad, especializado en analisis forense, seguridad de redes y respuestas a incidencias. 
+                        Manejo de Ciberinteligencia y evaluaciones de vulnerabilidad.
+                        Apasionado por la seguridad de la información y la protección de datos, con un enfoque en la mejora continua de las prácticas de seguridad.
+                    </p>
+                    <h2 class="seccion-titulo">Habilidades</h2>
+                    <div class="habilidades-contenedor">
+                        <div class="habilidad">Analisis Forense</div>
+                        <div class="habilidad">Hacking Etico</div>
+                        <div class="habilidad">Ciberinteligencia</div>
+                        <div class="habilidad">Analisis de Seguridad</div>
+                        <div class="habilidad">Liderazgo de Equipos Multifuncionales</div>
+                    </div>
+                    <h2 class="seccion-titulo">Experiencia</h2>
+                    <div class="contenedor-experiencia">
+                        <div class="experiencia-item">
+                            <div class="experiencia-logo"></div>
+                            <div class="experiencia-detalles">
+                                <p class="experiencia-titulo">Gerente Senior</p>
+                                <p class="experiencia-ubicacion">San Francisco, CA</p>
+                                <p class="experiencia-periodo">2018 - Presente</p>
+                            </div>
+                        </div>
+                        <div class="experiencia-item">
+                            <div class="experiencia-logo"></div>
+                            <div class="experiencia-detalles">
+                                <p class="experiencia-titulo">Gerente</p>
+                                <p class="experiencia-ubicacion">San Francisco, CA</p>
+                                <p class="experiencia-periodo">2016 - 2018</p>
+                            </div>
+                        </div>
+                        <div class="experiencia-item">
+                            <div class="experiencia-logo"></div>
+                            <div class="experiencia-detalles">
+                                <p class="experiencia-titulo">Asociada de Gestión de Empresas</p>
+                                <p class="experiencia-ubicacion">San Francisco, CA</p>
+                                <p class="experiencia-periodo">2014 - 2016</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="derecha-encabezado">
-          <div class="enlaces-navegacion">
-            <a href="principalEstudiante.html" class="enlace-navegacion">Inicio</a>
-            <a href="buscarEmpresas.html" class="enlace-navegacion">Empresas</a>
-            <a href="estatusPostulacion.html" class="enlace-navegacion">Postulaciones</a>
-          </div>
-          <div class="imagen-perfil">
-            <a href="perfilEstudiante.html">
-              <img src="dx.png" alt="Imagen Perfil" class="imagen-perfil-img" width="30" height="30">
-            </a>
-          </div>
-        </div>
-      </header>
-      <div class="contenido-principal">
-        <div class="contenido-contenedor">
-          <div class="perfil-contenedor">
-            <div class="perfil-info">
-              <div class="perfil-foto"></div>
-              <div class="perfil-detalles">
-                <p class="perfil-nombre">Nayer M</p><br>
-                <p class="perfil-titulo">Gerente Senior de Producto en Innovate Solutions</p>
-                <p class="perfil-ubicacion">Ubicada en el Área de la Bahía de San Francisco</p>
-              </div>
-              <a href="actualizarPerfilEstudiante.php" target="_blank">
-                <button class="boton-editar">Editar Perfil</button>
-              </a>
-              <hr class="divisor-perfil">
-            </div>
-          </div>
-          <h2 class="seccion-titulo">Acerca de</h2>
-          <p class="seccion-texto">
-            Trabajador de Ciberseguridad, especializado en analisis forense, seguridad de redes y respuestas a incidencias. 
-            Manejo de Ciberinteligencia y evaluaciones de vulnerabilidad.
-            Apasionado por la seguridad de la información y la protección de datos, con un enfoque en la mejora continua de las prácticas de seguridad.
-          </p>
-          <h2 class="seccion-titulo">Habilidades</h2>
-          <div class="habilidades-contenedor">
-            <div class="habilidad">Analisis Forense</div>
-            <div class="habilidad">Hacking Etico</div>
-            <div class="habilidad">Ciberinteligencia</div>
-            <div class="habilidad">Analisis de Seguridad</div>
-            <div class="habilidad">Liderazgo de Equipos Multifuncionales</div>
-          </div>
-          <h2 class="seccion-titulo">Experiencia</h2>
-          <div class="contenedor-experiencia">
-            <div class="experiencia-item">
-              <div class="experiencia-logo"></div>
-              <div class="experiencia-detalles">
-                <p class="experiencia-titulo">Gerente Senior</p>
-                <p class="experiencia-ubicacion">San Francisco, CA</p>
-                <p class="experiencia-periodo">2018 - Presente</p>
-              </div>
-            </div>
-            <div class="experiencia-item">
-              <div class="experiencia-logo"></div>
-              <div class="experiencia-detalles">
-                <p class="experiencia-titulo">Gerente</p>
-                <p class="experiencia-ubicacion">San Francisco, CA</p>
-                <p class="experiencia-periodo">2016 - 2018</p>
-              </div>
-            </div>
-            <div class="experiencia-item">
-              <div class="experiencia-logo"></div>
-              <div class="experiencia-detalles">
-                <p class="experiencia-titulo">Asociada de Gestión de Empresas</p>
-                <p class="experiencia-ubicacion">San Francisco, CA</p>
-                <p class="experiencia-periodo">2014 - 2016</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </body>
 </html>
