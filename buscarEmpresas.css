@@ -98,7 +98,12 @@ body {
     border-radius: 7%;
 }
 
-.enlace-navegacion-activo:hover,
+.enlace-navegacion-activo:hover {
+    color: #ffffff;
+    background-color: #5e130a;
+    border-radius: 6px;
+}
+
 .enlace-navegacion:hover {
     color: #ffffff;
     background-color: #5e130a;
@@ -342,7 +347,7 @@ body {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
     .logo img {
         max-width: 120px;
         max-height: 35px;
