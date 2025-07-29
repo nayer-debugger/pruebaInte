@@ -1,0 +1,361 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #f1f5f9;
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+    color: #0d141c;
+}
+
+.raiz-diseno {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.contenedor-diseno {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5%;
+    border-bottom: 1px solid #e7edf4;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.izquierda-encabezado {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.imagen-logo {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.izquierda-encabezado .enlaces-navegacion {
+    display: none;
+}
+
+.derecha-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.derecha-encabezado .enlaces-navegacion {
+    display: flex;
+    gap: 20px;
+}
+
+.derecha-encabezado .imagen-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.derecha-encabezado .imagen-perfil-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.enlace-navegacion {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0d141c;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.enlace-navegacion-activo {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0d141c;
+    text-decoration: none;
+    transition: all 0.2s;
+    background-color: #e7edf4;
+    border-radius: 7%;
+}
+
+.enlace-navegacion-activo:hover {
+    color: #ffffff;
+    background-color: #5e130a;
+    border-radius: 6px;
+    transition: 0.4s;
+} 
+
+.enlace-navegacion:hover {
+    color: #ffffff;
+    background-color: #5e130a;
+    border-radius: 6px;
+    transition: 0.4s;
+}
+
+.contenido-principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5%;
+    justify-content: center;
+}
+
+.seccion-busqueda {
+    padding: 16px 0;
+}
+
+.busqueda-empresa {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    align-items: stretch;
+    border-radius: 8px;
+}
+
+.busqueda-empresa .icono-busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7edf4;
+    padding-left: 16px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.busqueda-empresa .icono-busqueda img {
+    width: 25px;
+    height: 25px;
+}
+
+.entrada-empresa {
+    flex: 1;
+    border: none;
+    background-color: #e7edf4;
+    padding: 0 16px;
+    font-size: 16px;
+    color: #0d141c;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    outline: none;
+}
+
+.busqueda-empresa .icono-limpiar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7edf4;
+    padding-right: 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.busqueda-empresa .icono-limpiar img {
+    width: 24px;
+    height: 24px;
+}
+
+.titulo-seccion {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    padding: 20px 16px 12px;
+    color: #0d141c;
+}
+
+.lista-empresas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #f1f5f9;
+    padding: 8px 16px;
+    min-height: 72px;
+}
+
+.item-empresa {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+    background-color: #f1f5f9;
+    min-height: 72px;
+}
+
+.logo-empresa {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imagen-logo-empresa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-empresa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.nombre-empresa {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #0d141c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.categoria-empresa {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #49739c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+    margin: 0;
+}
+
+.item-empresa:hover{
+    background-color: #d7deeb;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 3%;
+        justify-content: center;
+    }
+
+    .izquierda-encabezado {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imagen-logo {
+        max-width: 180px;
+        max-height: 50px;
+    }
+
+    .derecha-encabezado {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contenido-principal {
+        padding: 15px 3%;
+    }
+
+    .busqueda-empresa {
+        height: 40px;
+    }
+
+    .titulo-seccion {
+        font-size: 20px;
+        padding: 16px 12px 10px;
+    }
+
+    .item-empresa {
+        min-height: 64px;
+    }
+
+    .logo-empresa {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado {
+        padding: 8px 3%;
+    }
+
+    .derecha-encabezado {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .imagen-logo {
+        max-width: 150px;
+        max-height: 40px;
+    }
+
+    .contenido-principal {
+        padding: 10px 3%;
+    }
+
+    .titulo-seccion {
+        font-size: 18px;
+        padding: 12px 8px 8px;
+    }
+
+    .item-empresa {
+        min-height: 56px;
+    }
+
+    .logo-empresa {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nombre-empresa {
+        font-size: 14px;
+    }
+
+    .categoria-empresa {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 468px) {
+    .info-empresa {
+        text-align: center;
+        width: 100%;
+    }
+
+    .categoria-empresa {
+        text-align: center;
+        -webkit-line-clamp: 3;
+        font-size: 14px;
+    }
+}

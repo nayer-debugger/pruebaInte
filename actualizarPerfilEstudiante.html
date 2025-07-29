@@ -1,0 +1,184 @@
+<?php
+$errores = [];
+$mensaje_exito = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $matricula = trim($_POST['matricula'] ?? '');
+    $nombre_completo = trim($_POST['nombre_completo'] ?? '');
+    $grupo = trim($_POST['grupo'] ?? '');
+    $carrera = trim($_POST['carrera'] ?? '');
+    $no_movil = trim($_POST['no_movil'] ?? '');
+    $domicilio = trim($_POST['domicilio'] ?? '');
+    $correo = trim($_POST['correo'] ?? '');
+    $contrasena = trim($_POST['contrasena'] ?? '');
+
+    if (empty($matricula)) {
+        $errores[] = "La matrícula es obligatoria.";
+    }
+    if (empty($nombre_completo)) {
+        $errores[] = "El nombre completo es obligatorio.";
+    }
+    if (empty($grupo)) {
+        $errores[] = "El grupo es obligatorio.";
+    }
+    if (empty($carrera) || $carrera === 'Seleccionar') {
+        $errores[] = "Selecciona tu carrera.";
+    }
+    if (empty($no_movil) || !preg_match('/^\d{10}$/', $no_movil)) {
+        $errores[] = "Ingresa un número móvil válido (10 dígitos).";
+    }
+    if (empty($domicilio)) {
+        $errores[] = "El domicilio es obligatorio.";
+    }
+    if (empty($correo) || !filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+        $errores[] = "Ingresa un correo válido.";
+    }
+    if (empty($contrasena) || strlen($contrasena) < 8) {
+        $errores[] = "La contraseña debe tener al menos 8 caracteres.";
+    }
+
+    if (empty($errores)) {
+        $mensaje_exito = "Registro completado con éxito.";
+        $_POST = [];
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Datos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="actualizarPerfilEstudiante.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="contenedor-layout">
+            <header class="encabezado">
+                <div class="contenedor-logo">
+                    <h2 class="titulo-empresa"><img src="Logo.png" alt="Logo" height="60" width="220"></h2>
+                </div>
+            </header>
+            <div class="contenedor-contenido">
+                <div class="formulario-contenedor">
+                    <h2 class="titulo-formulario">Actualiza tus datos</h2><br>
+                    <?php if (!empty($errores)): ?>
+                        <div class="mensaje-error">
+                            <?php foreach ($errores as $error): ?>
+                                <p><?php echo htmlspecialchars($error); ?></p>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($mensaje_exito): ?>
+                        <div class="mensaje-exito">
+                            <p><?php echo htmlspecialchars($mensaje_exito); ?></p>
+                        </div>
+                    <?php endif; ?>
+                    <form method="POST" action="">
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Matrícula</p>
+                                <input
+                                    type="text"
+                                    name="matricula"
+                                    placeholder="Ingresa tu matrícula"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['matricula']) ? htmlspecialchars($_POST['matricula']) : ''; ?>"
+                                    required
+                                
+                            </label> <br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Nombre Completo</p>
+                                <input
+                                    type="text"
+                                    name="nombre_completo"
+                                    placeholder="Ingresa tu nombre completo"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['nombre_completo']) ? htmlspecialchars($_POST['nombre_completo']) : ''; ?>"
+                                    required
+                                
+                            </label> <br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Grupo</p>
+                                <input
+                                    type="text"
+                                    name="grupo"
+                                    placeholder="Ingresa tu grupo"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['grupo']) ? htmlspecialchars($_POST['grupo']) : ''; ?>"
+                                    required
+                                
+                            </label>
+                        </div>
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Carrera</p>
+                                <select name="carrera" class="entrada-formulario" required>
+                                    <option value="Seleccionar">Selecciona tu carrera</option>
+                                    <option value="TSU-SOFT" <?php echo isset($_POST['carrera']) && $_POST['carrera'] === 'TSU-SOFT' ? 'selected' : ''; ?>>TSU Desarrollo de Software Multiplataforma</option>
+                                    <option value="TSU-REDES" <?php echo isset($_POST['carrera']) && $_POST['carrera'] === 'TSU-REDES' ? 'selected' : ''; ?>>TSU Redes Inteligentes y Ciberseguridad</option>
+                                    <option value="ING-SOFT" <?php echo isset($_POST['carrera']) && $_POST['carrera'] === 'ING-SOFT' ? 'selected' : ''; ?>>ING Desarrollo de Software Multiplataforma</option>
+                                    <option value="ING-REDES" <?php echo isset($_POST['carrera']) && $_POST['carrera'] === 'ING-REDES' ? 'selected' : ''; ?>>ING Redes Inteligentes y Ciberseguridad</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Número Móvil</p>
+                                <input
+                                    type="text"
+                                    name="no_movil"
+                                    placeholder="Ingresa tu número móvil"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['no_movil']) ? htmlspecialchars($_POST['no_movil']) : ''; ?>"
+                                    required
+                            </label>
+                        </div>
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Domicilio</p>
+                                <textarea
+                                    name="domicilio"
+                                    placeholder="Ingresa tu domicilio"
+                                    class="entrada-formulario"
+                                    required
+                                ><?php echo isset($_POST['domicilio']) ? htmlspecialchars($_POST['domicilio']) : ''; ?></textarea>
+                            </label>
+                        </div>
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Correo</p>
+                                <input
+                                    type="email"
+                                    name="correo"
+                                    placeholder="Ingresa tu correo"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['correo']) ? htmlspecialchars($_POST['correo']) : ''; ?>"
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Contraseña</p>
+                                <input
+                                    type="password"
+                                    name="contrasena"
+                                    placeholder="Ingresa una contraseña"
+                                    class="entrada-formulario"
+                                    value=""
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div class="contenedor-boton">
+                            <button type="submit" class="boton-inicio"><span>Actualizar mis datos</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

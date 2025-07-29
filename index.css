@@ -1,0 +1,357 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Noto Sans', sans-serif;
+}
+
+
+.contenedor-principal {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.contenedor-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7edf4;
+  padding: 0.75rem 2.5rem;
+}
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #0d141c;
+}
+
+.titulo-empresa {
+  color: #0d141c;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+.boton-registro {
+  min-width: 84px;
+  max-width: 480px;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: #3490f3;
+  color: #f8fafc;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.boton-registro span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contenedor-contenido {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 1.25rem clamp(1rem, 5vw, 10rem);
+}
+
+.formulario-contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 32rem;
+  padding: 1.25rem 0;
+}
+
+.titulo-formulario {
+  color: #4d1007;
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-align: center;
+  padding: 1.25rem 1rem 0.75rem;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  max-width: 100%;
+  margin-left: 0;
+}
+
+.etiqueta-campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 10rem;
+  flex: 1;
+}
+
+.texto-etiqueta {
+  color: #581008;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+}
+
+.entrada-formulario {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.8rem;
+  background-color: #e7edf4;
+  color: #0d141c;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  font-weight: 400;
+  line-height: 1;
+  border: none;
+  border-radius: 0.75rem;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.entrada-formulario::placeholder {
+  color: #49719c;
+}
+
+.texto-olvidar-contrasena {
+  color: #49719c;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: underline;
+  padding: 1rem 1rem 0.75rem;
+}
+
+.contenedor-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  min-height: 3.5rem;
+  justify-content: space-between;
+}
+
+.texto-recordar {
+  color: #0d141c;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  font-weight: 400;
+  line-height: 1;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contenedor-input-checkbox {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #cedbe8;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #5e130a;
+  border-color: #cc5e5e;
+}
+
+.contenedor-boton {
+  padding: 0.75rem 1rem;
+}
+
+.boton-inicio {
+  min-width: 84px;
+  max-width: 480px;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: #5e130a;
+  color: #f8fafc;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  margin-top: 2%;
+}
+
+.boton-inicio span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subtitulo-registro {
+  color: #0d141c;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  padding: 1rem 1rem 0.5rem;
+}
+
+.contenedor-botones-registro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.boton-opcion-registro {
+  min-width: 84px;
+  max-width: 480px;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: #e7edf4;
+  color: #560c09;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+}
+
+.boton-opcion-registro span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.boton-opcion-registro:hover {
+  color: #ffffff;
+  background-color: rgb(99, 9, 9);
+}
+
+.texto-olvidar-contrasena:hover {
+  color: #4b1506;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.boton-inicio:hover{
+  color: white;
+  background-color: brown;
+}
+
+@media (max-width: 700px) {
+  .encabezado {
+    padding: 0.5rem 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contenedor-contenido {
+    padding: 1rem 2rem;
+  }
+
+  .formulario-contenedor {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .campo-formulario {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .etiqueta-campo {
+    min-width: 100%;
+  }
+
+  .entrada-formulario {
+    height: 3rem;
+  }
+
+  .contenedor-botones-registro {
+    flex-direction: column;
+    width: 10000px;
+    height: 100px !important;
+  }
+
+  .boton-opcion-registro {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .encabezado {
+    padding: 0.5rem 1rem;
+  }
+
+  .contenedor-contenido {
+    padding: 0.75rem 1rem;
+  }
+
+  .titulo-formulario {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+  }
+
+  
+  .boton-inicio,
+  .boton-opcion-registro {
+    height: 2.25rem;
+    font-size: clamp(0.7rem, 3vw, 0.8rem);
+  }
+
+  .entrada-formulario {
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
+    padding: 0.6rem;
+  }
+
+  .texto-etiqueta,
+  .texto-recordar {
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
+  }
+}

@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+}
+
+.contenedor-principal {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.contenedor-layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7edf4;
+    padding: 0.75rem 2.5rem;
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #0d141c;
+}
+
+.titulo-empresa {
+    color: #0d141c;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.015em;
+}
+
+.contenedor-contenido {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 1.25rem clamp(1rem, 5vw, 10rem);
+}
+
+.formulario-contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 32rem;
+    padding: 1.25rem 0;
+}
+
+.titulo-formulario {
+    color: #4d1007;
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    text-align: center;
+    padding: 1.25rem 1rem 0.75rem;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    max-width: 100%;
+}
+
+.etiqueta-campo {
+    display: flex;
+    flex-direction: column;
+    min-width: 10rem;
+    flex: 1;
+}
+
+.texto-etiqueta {
+    color: #581008;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-weight: 500;
+    line-height: 1;
+    padding-bottom: 0.5rem;
+}
+
+.entrada-formulario {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.8rem;
+    background-color: #e7edf4;
+    color: #0d141c;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-weight: 400;
+    line-height: 1;
+    border: none;
+    border-radius: 0.75rem;
+    outline: none;
+}
+
+.entrada-formulario::placeholder {
+    color: #49719c;
+}
+
+.entrada-formulario[type="text"],
+.entrada-formulario[type="email"],
+.entrada-formulario[type="password"] {
+    resize: none;
+    overflow: hidden;
+}
+
+.entrada-formulario[type="textarea"] {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.entrada-formulario[type="select"] {
+    appearance: none;
+}
+
+.mensaje-error,
+.mensaje-exito {
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.contenedor-boton {
+    padding: 0.75rem 1rem;
+}
+
+.boton-inicio {
+    min-width: 84px;
+    max-width: 480px;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: #5e130a;
+    color: #f8fafc;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.015em;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.boton-inicio span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.boton-inicio:hover {
+  background-color: brown;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+    .encabezado {
+        padding: 0.5rem 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contenedor-contenido {
+        padding: 1rem 2rem;
+    }
+
+    .formulario-contenedor {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem 0;
+    }
+
+    .campo-formulario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .etiqueta-campo {
+        min-width: 100%;
+    }
+
+    .entrada-formulario {
+        height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado {
+        padding: 0.5rem 1rem;
+    }
+
+    .contenedor-contenido {
+        padding: 0.75rem 1rem;
+    }
+
+    .titulo-formulario {
+        font-size: clamp(1.25rem, 5vw, 1.5rem);
+    }
+
+    .boton-registro,
+    .boton-inicio {
+        height: 2.25rem;
+        font-size: clamp(0.7rem, 3vw, 0.8rem);
+    }
+
+    .entrada-formulario {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+        padding: 0.6rem;
+    }
+
+    .texto-etiqueta {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+    }
+}

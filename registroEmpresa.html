@@ -1,0 +1,176 @@
+<?php
+$errores = [];
+$mensaje_exito = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $no = trim($_POST['no'] ?? '');
+    $empresa = trim($_POST['empresa'] ?? '');
+    $direccion = trim($_POST['direccion'] ?? '');
+    $ubicacion = trim($_POST['ubicacion'] ?? '');
+    $contacto = trim($_POST['contacto'] ?? '');
+    $cargo = trim($_POST['cargo'] ?? '');
+    $telefono = trim($_POST['telefono'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+
+    if (empty($no)) {
+        $errores[] = "El número es obligatorio.";
+    }
+    if (empty($empresa)) {
+        $errores[] = "El nombre de la empresa es obligatorio.";
+    }
+    if (empty($direccion)) {
+        $errores[] = "La dirección es obligatoria.";
+    }
+    if (empty($ubicacion)) {
+        $errores[] = "La ubicación es obligatoria.";
+    }
+    if (empty($contacto)) {
+        $errores[] = "El contacto es obligatorio.";
+    }
+    if (empty($cargo)) {
+        $errores[] = "El cargo es obligatorio.";
+    }
+    if (empty($telefono) || !preg_match('/^[0-9]{10}$/', $telefono)) {
+        $errores[] = "Ingresa un teléfono válido de 10 dígitos.";
+    }
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errores[] = "Ingresa un correo electrónico válido.";
+    }
+
+    if (empty($errores)) {
+        $mensaje_exito = "Registro completado con éxito.";
+        $_POST = [];
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresa</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="registroEmpresa.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="contenedor-layout">
+            <header class="encabezado">
+                <div class="contenedor-logo">
+                    <h2 class="titulo-empresa"><img src="Logo.png" alt="TalentConnect Logo" height="60" width="220"></h2>
+                </div>
+            </header>
+            <div class="contenedor-contenido">
+                <div class="formulario-contenedor">
+                    <h2 class="titulo-formulario">Crea tu cuenta de Empresa</h2><br>
+                    <?php if (!empty($errores)): ?>
+                        <div class="mensaje-error">
+                            <?php foreach ($errores as $error): ?>
+                                <p><?php echo htmlspecialchars($error); ?></p>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($mensaje_exito): ?>
+                        <div class="mensaje-exito">
+                            <p><?php echo htmlspecialchars($mensaje_exito); ?></p>
+                        </div>
+                    <?php endif; ?>
+                    <form method="POST" action="">
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Nó. (*obligatorio*)</p>
+                                <input
+                                    type="text"
+                                    name="no"
+                                    placeholder="Ingresa el número"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['no']) ? htmlspecialchars($_POST['no']) : ''; ?>"
+                                    required
+                                
+                            </label><br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Empresa (*obligatorio*)</p>
+                                <input
+                                    type="text"
+                                    name="empresa"
+                                    placeholder="Ingresa el nombre de la empresa"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['empresa']) ? htmlspecialchars($_POST['empresa']) : ''; ?>"
+                                    required
+                                
+                            </label><br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Dirección (*obligatorio*)</p>
+                                <textarea
+                                    name="direccion"
+                                    placeholder="Ingresa la dirección"
+                                    class="entrada-formulario"
+                                    required
+                                ><?php echo isset($_POST['direccion']) ? htmlspecialchars($_POST['direccion']) : ''; ?></textarea>
+                            </label><br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Ubicación (*obligatorio*)</p>
+                                <input
+                                    type="text"
+                                    name="ubicacion"
+                                    placeholder="Ingresa la ubicación"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['ubicacion']) ? htmlspecialchars($_POST['ubicacion']) : ''; ?>"
+                                    required
+                                
+                            </label><br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Contacto (*obligatorio*)</p>
+                                <input
+                                    type="text"
+                                    name="contacto"
+                                    placeholder="Ingresa el contacto"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['contacto']) ? htmlspecialchars($_POST['contacto']) : ''; ?>"
+                                    required
+                                
+                            </label><br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Cargo (*obligatorio*)</p>
+                                <input
+                                    type="text"
+                                    name="cargo"
+                                    placeholder="Ingresa el cargo"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['cargo']) ? htmlspecialchars($_POST['cargo']) : ''; ?>"
+                                    required
+                                
+                            </label><br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">Teléfono (*obligatorio*)</p>
+                                <input
+                                    type="tel"
+                                    name="telefono"
+                                    placeholder="Ingresa el teléfono"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['telefono']) ? htmlspecialchars($_POST['telefono']) : ''; ?>"
+                                    required
+                                
+                            </label><br>
+                            <label class="etiqueta-campo">
+                                <p class="texto-etiqueta">E-mail (*obligatorio*)</p>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Ingresa el correo electrónico"
+                                    class="entrada-formulario"
+                                    value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>"
+                                    required
+                                
+                            </label>
+                        </div>
+                        <div class="contenedor-boton">
+                            <button type="submit" class="boton-inicio"><span>Completar Registro</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

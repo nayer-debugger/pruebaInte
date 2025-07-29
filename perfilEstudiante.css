@@ -1,0 +1,346 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Noto Sans', sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.contenedor-layout {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  border-bottom: 1px solid #e7edf4;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.izquierda-encabezado {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-titulo-imagen {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.derecha-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.derecha-encabezado .enlaces-navegacion {
+  display: flex;
+  gap: 20px;
+}
+
+.derecha-encabezado .imagen-perfil {
+  display: flex;
+  align-items: center;
+}
+
+.derecha-encabezado .imagen-perfil-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.enlace-navegacion {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0d141c;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.enlace-navegacion:hover {
+  color: #ffffff;
+  background-color: #5e130a;
+  border-radius: 6px;
+  transition: 0.4s;
+}
+
+.contenido-principal {
+  display: flex;
+  justify-content: center;
+  padding: 20px 5%;
+}
+
+.contenido-contenedor {
+  max-width: 960px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-contenedor {
+  padding: 16px;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.perfil-foto {
+  width: 128px;
+  height: 128px;
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYvouXVqpEMwGkbOJymU7F28nXGXZMTvjt-c6duKVxRl3ZA8uv9QXiLOAJh54mMzgDuIIZ039HfFnuQjr89XCAVk8vikVu46-0uj_rHjuASv-sgUm_mmSBLhBEj1aTOjtZcpt_iVMvkdfHzjhZp6a2oYUEniNJkEI5ZHJ97y1z-vfiCu2dJAaTBzLL7M_W4BHXR4qqE_9IDPZ2gSGlKBtSe0zllNqBvS__vodAnNsK3J3T9tyhVCUah_ILojFBL7WW-q1RbH237lA');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.perfil-detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.perfil-nombre {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d141c;
+  margin: 0;
+}
+
+.perfil-titulo,
+.perfil-ubicacion {
+  font-size: 16px;
+  color: #49739c;
+  margin: 4px 0;
+}
+
+.boton-editar {
+  width: 300px;
+  max-width: 480px;
+  height: 40px;
+  background-color: #5e130a;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.boton-editar:hover {
+  background-color: brown;
+  transition: 0.4s;
+}
+
+.divisor-perfil {
+  width: 100%;
+  border: 0;
+  border-top: 4px solid #e7edf4;
+  margin: 16px 0;
+}
+
+.seccion-titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d141c;
+  padding: 20px 16px 12px;
+  margin: 0;
+}
+
+.seccion-texto {
+  font-size: 16px;
+  color: #0d141c;
+  padding: 4px 16px 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.habilidades-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.habilidad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 16px;
+  background-color: #e7edf4;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0d141c;
+}
+
+.habilidad:hover {
+  background-color: rgb(186, 186, 177);
+  transition: 0.4s;
+}
+
+.contenedor-experiencia {
+  display: flex;
+  flex-direction: column;
+}
+
+.experiencia-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+}
+
+.experiencia-logo {
+  width: 70px;
+  height: 70px;
+  background-image: url('https://via.placeholder.com/70');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.experiencia-detalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experiencia-titulo {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0d141c;
+  margin: 0;
+}
+
+.experiencia-ubicacion,
+.experiencia-periodo {
+  font-size: 14px;
+  color: #49739c;
+  margin: 2px 0;
+}
+
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 3%;
+    justify-content: center;
+  }
+
+  .izquierda-encabezado {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-titulo-imagen {
+    max-width: 180px;
+    max-height: 50px;
+  }
+
+  .derecha-encabezado {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .contenido-principal {
+    padding: 15px 3%;
+  }
+
+  .perfil-foto {
+    width: 100px;
+    height: 100px;
+  }
+
+  .perfil-nombre {
+    font-size: 20px;
+  }
+
+  .perfil-titulo,
+  .perfil-ubicacion {
+    font-size: 14px;
+  }
+
+  .seccion-titulo {
+    font-size: 20px;
+  }
+
+  .seccion-texto {
+    font-size: 14px;
+  }
+
+  .experiencia-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .derecha-encabezado {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .enlaces-navegacion {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo-titulo-imagen {
+    max-width: 150px;
+    max-height: 40px;
+  }
+
+  .perfil-foto {
+    width: 80px;
+    height: 80px;
+  }
+
+  .boton-editar {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .habilidad {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .experiencia-logo {
+    width: 40px;
+    height: 40px;
+  }
+}

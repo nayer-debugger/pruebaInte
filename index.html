@@ -1,0 +1,119 @@
+<?php
+// Iniciar sesión para manejar mensajes de error
+session_start();
+
+$mensaje_error = '';
+$mensaje_exito = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['iniciar_sesion'])) {
+    $usuario = trim($_POST['usuario'] ?? '');
+    $contrasena = trim($_POST['contrasena'] ?? '');
+    $recordar = isset($_POST['recordar']);
+
+    
+    if (empty($usuario) || empty($contrasena)) {
+        $mensaje_error = 'Por favor, completa todos los campos.';
+    } else {
+        $mensaje_exito = 'Inicio de sesión exitoso para ' . htmlspecialchars($usuario) . '.';
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tipo_registro'])) {
+    $tipo = $_POST['tipo_registro'];
+    if ($tipo === 'estudiante') {
+        header('Location: registroEstudiante.php');
+        exit;
+    } elseif ($tipo === 'empresa') {
+        header('Location: registroEmpresa.php');
+        exit;
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
+    />
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="contenedor-principal">
+      <div class="contenedor-layout">
+
+        <header class="encabezado">
+          <div class="contenedor-logo">
+            <div class="logo"></div>
+            <h2 class="titulo-empresa"><img src="Logo.png" alt="" height="60" width="220"></h2>
+          </div>
+
+        </header>
+
+        <div class="contenedor-contenido">
+          <div class="formulario-contenedor">
+            <h2 class="titulo-formulario">¡Bienvenido!</h2>
+            <?php if ($mensaje_error): ?>
+              <p class="mensaje-error"><?php echo htmlspecialchars($mensaje_error); ?></p>
+            <?php elseif ($mensaje_exito): ?>
+              <p class="mensaje-exito"><?php echo htmlspecialchars($mensaje_exito); ?></p>
+            <?php endif; ?>
+
+            <form action="" method="">
+            <div class="campo-formulario">
+              <label class="etiqueta-campo">
+                <p class="texto-etiqueta">Usuario</p>
+                <input
+                  name="usuario"
+                  placeholder="Ingresa tu usuario"
+                  class="entrada-formulario"
+                />
+              </label>
+            </div>
+            <div class="campo-formulario">
+              <label class="etiqueta-campo">
+                <p class="texto-etiqueta">Contraseña</p>
+                <input
+                  name="contrasena"
+                  placeholder="Ingresa tu contraseña"
+                  class="entrada-formulario"
+                  type="password"
+                />
+              </label>
+            </div>
+            <div class="contenedor-checkbox">
+                <p class="texto-recordar">Recordarme</p>
+                <div class="contenedor-input-checkbox">
+                  <input type="checkbox" name="recordar" class="checkbox" />
+                </div>
+              </div>
+            <div class="contenedor-boton">
+              <button type="submit" name="inciar_sesion" class="boton-inicio">
+                <span><a href="principalEstudiante.html">Iniciar sesion</a></span>
+              </button>
+            </div> 
+            </form>
+            <p class="texto-olvidar-contrasena">¿Olvidaste tu contraseña?</p>
+              <center><h3 class="subtitulo-registro">O regístrate como</h3></center>
+              <form action="" method="POST">
+            <div class="contenedor-botones-registro">
+              <button class="boton-opcion-registro" type="submit" name="tipo_registro" value="estudiante">
+                <span><a href="registroEstudiante.php">Estudiante</a></span>
+              </button>
+              <button class="boton-opcion-registro" type="submit" name="tipo_registro" value="empresa">
+                <span><a href="registroEmpresa.php">Empresa</a></span>
+              </button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
