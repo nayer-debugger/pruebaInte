@@ -299,3 +299,46 @@ body {
         padding: 0 8px;
     }
 }
+
+@media (max-width: 360px) {
+    .logo img {
+        max-width: 120px;
+        max-height: 35px;
+    }
+
+    .enlaces-navegacion {
+        gap: 3px;
+    }
+
+    .enlace-navegacion,
+    .enlace-navegacion-activo {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .contenido-principal {
+        padding: 8px 3%;
+    }
+
+    .titulo-seccion {
+        font-size: 16px;
+        padding: 10px 6px 6px;
+    }
+
+    .item-empresa {
+        min-height: 48px;
+    }
+
+    .logo-empresa {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nombre-empresa {
+        font-size: 12px;
+    }
+
+    .categoria-empresa {
+        font-size: 10px;
+    }
+}
