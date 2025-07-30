@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     background-color: #f1f5f9;
     font-family: 'Inter', 'Noto Sans', sans-serif;
@@ -13,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -21,7 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
     flex-grow: 1;
 }
 
@@ -29,12 +27,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0;
+    padding: 12px 5%;
     border-bottom: 1px solid #e7edf4;
     background-color: #ffffff;
     flex-wrap: wrap;
     gap: 10px;
-    width: 100%;
 }
 
 .izquierda-encabezado {
@@ -99,13 +96,13 @@ body {
     transition: all 0.2s;
     background-color: #e7edf4;
     border-radius: 7%;
-}
+} 
 
 .enlace-navegacion-activo:hover {
     color: #ffffff;
     background-color: #5e130a;
     border-radius: 6px;
-}
+} 
 
 .enlace-navegacion:hover {
     color: #ffffff;
@@ -117,20 +114,18 @@ body {
     display: flex;
     flex: 1;
     justify-content: center;
-    padding: 0;
-    width: 100%;
+    padding: 20px 5%;
 }
 
 .contenedor-contenido {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 960px;
     width: 100%;
-    padding: 0;
 }
 
 .titulo-seccion {
-    padding: 16px 0;
+    padding: 16px;
 }
 
 .titulo-seccion p {
@@ -141,21 +136,20 @@ body {
 }
 
 .contenedor-tabla {
-    padding: 0;
-    width: 100%;
+    padding: 12px 16px;
+    overflow-x: auto;
 }
 
 .tabla-borde {
     border: 1px solid #e7edf4;
-    border-radius: 0;
+    border-radius: 12px;
     background-color: #ffffff;
-    width: 100%;
 }
 
 .tabla {
     width: 100%;
     border-collapse: collapse;
-    min-width: 100%;
+    min-width: 300px;
 }
 
 .tabla thead tr {
@@ -224,7 +218,7 @@ body {
     .encabezado {
         flex-direction: column;
         align-items: center;
-        padding: 10px 0;
+        padding: 10px 3%;
         justify-content: center;
     }
 
@@ -245,7 +239,7 @@ body {
     }
 
     .contenido-principal {
-        padding: 0;
+        padding: 20px 3%;
     }
 
     .titulo-seccion p {
@@ -323,11 +317,28 @@ body {
     }
 
     .contenido-principal {
-        padding: 0;
+        padding: 8px 3%;
     }
 
     .titulo-seccion {
         font-size: 16px;
-        padding: 10px 0 6px;
+        padding: 10px 6px 6px;
+    }
+
+    .item-empresa {
+        min-height: 48px;
+    }
+
+    .logo-empresa {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nombre-empresa {
+        font-size: 12px;
+    }
+
+    .categoria-empresa {
+        font-size: 10px;
     }
 }
