@@ -60,8 +60,8 @@ body {
 .nav-container {
     display: flex;
     align-items: center;
-    gap: 20px;
-    white-space: nowrap; /* Evita que los elementos se rompan */
+    gap: 20px; /* Espacio general entre enlaces y el ícono */
+    white-space: nowrap;
 }
 
 .enlaces-navegacion {
@@ -72,6 +72,7 @@ body {
 .imagen-perfil {
     display: flex;
     align-items: center;
+    margin-left: 15px; /* Espacio específico entre "Postulaciones" y el ícono */
 }
 
 .imagen-perfil-img {
