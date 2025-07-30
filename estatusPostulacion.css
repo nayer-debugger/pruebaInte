@@ -302,8 +302,8 @@ body {
 
 @media (max-width: 360px) {
     .logo img {
-        max-width: 120px;
-        max-height: 35px;
+        max-width: 140px;
+        max-height: 55px;
     }
 
     .enlaces-navegacion {

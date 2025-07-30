@@ -353,8 +353,8 @@ body {
 
 @media (max-width: 360px) {
     .logo img {
-        max-width: 130px;
-        max-height: 45px;
+        max-width: 140px;
+        max-height: 55px;
     }
 
     .enlaces-navegacion {
