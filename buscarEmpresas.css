@@ -55,8 +55,13 @@ body {
 .derecha-encabezado {
     display: flex;
     align-items: center;
-    gap: 20px;
-    flex-wrap: nowrap; /* Cambiado a nowrap para mantener en fila en pantallas grandes */
+    gap: 0; /* Eliminamos el gap para controlar el espacio internamente */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre enlaces y el ícono de perfil */
 }
 
 .derecha-encabezado .enlaces-navegacion {
@@ -278,7 +283,12 @@ body {
         width: 100%;
         justify-content: center;
         margin-top: 10px;
-        flex-wrap: wrap; /* Permitir que se apile en pantallas pequeñas */
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .contenido-principal {
@@ -307,12 +317,6 @@ body {
 @media (max-width: 460px) {
     .encabezado {
         padding: 8px 3%;
-    }
-
-    .derecha-encabezado {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
     }
 
     .logo img {
