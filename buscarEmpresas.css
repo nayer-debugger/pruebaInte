@@ -56,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Cambiado a nowrap para mantener en fila en pantallas grandes */
 }
 
 .derecha-encabezado .enlaces-navegacion {
@@ -278,6 +278,7 @@ body {
         width: 100%;
         justify-content: center;
         margin-top: 10px;
+        flex-wrap: wrap; /* Permitir que se apile en pantallas pequeñas */
     }
 
     .contenido-principal {
