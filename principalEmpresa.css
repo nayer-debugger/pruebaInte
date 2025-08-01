@@ -187,7 +187,7 @@ body {
 }
 
 .campo-formulario textarea {
-    min-height: 144px;
+    min-height: 100px;
 }
 
 .contenedor-imagenes {
